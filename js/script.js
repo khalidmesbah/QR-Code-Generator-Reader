@@ -43,7 +43,7 @@ const createSaveBtn = (downloadUrl) => {
     link.className = `btn btn-primary mt-1`;
     link.href = downloadUrl;
     link.download = `qrcode-${generateRandomNumbers(30, 100)}`;
-    const text = document.createTextNode(`Save Image`);
+    const text = document.createTextNode(`Download`);
     link.appendChild(text);
     const modalFooter = document.getElementById(`modal-footer`);
     reset(modalFooter);
@@ -119,7 +119,7 @@ form.addEventListener(`submit`, (e) => {
 customColorsBtn.addEventListener(`click`, toggleColorGroup);
 const fetchRequest = async (formData) => {
     scanResult.value = `Scanning QR Code...`;
-    const response = await fetch(`http://api.qrserver.com/v1/read-qr-code/`, {
+    const response = await fetch(`https://api.qrserver.com/v1/read-qr-code/`, {
         method: `POST`,
         body: formData,
     });
@@ -154,7 +154,6 @@ dropArea.addEventListener(`dragleave`, (e) => {
 });
 dropArea.addEventListener(`dragover`, (e) => {
     e.preventDefault();
-    unHighlight();
 });
 // In order to have the drop event occur on a div element, you must cancel the ondragenter and ondragover
 dropArea.addEventListener(`drop`, (e) => {
