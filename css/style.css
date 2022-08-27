@@ -1,0 +1,74 @@
+svg {
+  border-radius: 50%;
+  margin: 5px;
+  width: 100px;
+}
+svg .loader {
+  -webkit-animation: spinner 1.5s linear infinite both;
+          animation: spinner 1.5s linear infinite both;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  stroke: #F85B5B;
+}
+@-webkit-keyframes spinner {
+  0% {
+    stroke-dasharray: 0 0 0 625px;
+  }
+  50% {
+    stroke-dasharray: 0 0 625px;
+  }
+  100% {
+    stroke-dasharray: 0 625px 0 0;
+  }
+}
+@keyframes spinner {
+  0% {
+    stroke-dasharray: 0 0 0 625px;
+  }
+  50% {
+    stroke-dasharray: 0 0 625px;
+  }
+  100% {
+    stroke-dasharray: 0 625px 0 0;
+  }
+}
+svg .bg {
+  position: absolute;
+  stroke: gray;
+}
+
+.laser-scan {
+  height: 3px;
+  display: none;
+}
+.laser-scan.active {
+  display: block;
+  -webkit-animation: move-laser 1.5s linear infinite alternate;
+          animation: move-laser 1.5s linear infinite alternate;
+}
+
+@-webkit-keyframes move-laser {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes move-laser {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+.info {
+  width: calc(100% - 300px);
+  min-width: 300px;
+  min-height: 300px;
+}
+.info.active {
+  border-style: dashed !important;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+svg {
+	border-radius: 50%;
+  margin: 5px;
+  width: 100px;
+  .loader {
+		animation: spinner 1.5s linear infinite both;
+		transform-origin: center;
+		transform: rotate(-90deg);
+    stroke:#F85B5B;
+	}
+	@keyframes spinner {
+		0% {
+			stroke-dasharray: 0 0 0 625px;
+		}
+		50% {
+			stroke-dasharray: 0 0 625px;
+		}
+		100% {
+			stroke-dasharray: 0 625px 0 0;
+		}
+	}
+  .bg{
+    position: absolute;
+    stroke:gray ;
+  }
+}
+.laser-scan{
+  height: 3px;
+  display: none;
+  &.active{
+    display: block;
+    animation: move-laser 1.5s linear infinite alternate;
+  }
+}
+@keyframes move-laser{
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+.info{
+  width: calc(100% - 300px);
+  min-width: 300px;
+  min-height: 300px;
+  &.active{
+    border-style: dashed !important;
+  }
+}
