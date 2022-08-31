@@ -1,9 +1,17 @@
 # QR-Code-Generator-Reader
-QR Code Generator &amp; Reader
+An app to generate and read QR codes.
 
-# QR Code Generator
+## Features
+- generate qr codes
+- download the generated qr codes
+- read qr codes
 
-Simple app to generate and download a QR code that can be used to share a link.
+## Technologies
+- HTML5
+- CSS3
+- SASS
+- JavaScript
+- BootStrap 5
 
 [Live Demo](http://qr-code-generator-reader.vercel.app/)
 
